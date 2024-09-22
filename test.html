@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+  
+    <title>Counter</title><style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .counter-container {
+            display: flex;
+            align-items: center;
+        }
+        .counter-container button {
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 0 10px;
+        }
+        .counter {
+            font-size: 24px;
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        let counter = 0;
+
+        function increaseCounter() {
+            counter++;
+            document.getElementById('counter').textContent = counter;
+        }
+
+        function decreaseCounter() {
+            counter--;
+            document.getElementById('counter').textContent  = counter;
+        }
+    </script>
+</head>
+
+<body>
+  <p>&#160;</p>
+    <div class="counter-container">
+        <button onclick="decreaseCounter()">-</button>
+        <div id="counter" class="counter">0</div>
+        <button onclick="increaseCounter()">+</button>
+    </div>
+
+</body>
+</html>
